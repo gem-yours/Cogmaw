@@ -1,22 +1,30 @@
 import json
+from typing import List
 
 from src.entity.champion import Champion
 
 
-def parse(json_str: str) -> Champion:
+def parse(json_str: str) -> List[Champion]:
     """
     parse json that has champion information
     :param json_str: json
     :return: Champion object
     """
     champion_json = json.loads(json_str)
-    champion = Champion()
-    champion.patch = champion_json['version']
-    champion.name = next(iter(champion_json['data']))
-    champion.japanese_name = champion_json['data'][champion.name]['name']
-    champion.resource_name = champion_json['data'][champion.name]['partype']
 
-    stats = champion_json['data'][champion.name]['stats']
+    return  [__convert_dict_to_champion(champion_json['data'][champion_name], champion_name, champion_json['version']) \
+             for champion_name in \
+             iter(champion_json['data'])]
+
+
+def __convert_dict_to_champion(champion_data: dict, champion_name: str, patch: str):
+    champion = Champion()
+    champion.patch = patch
+    champion.name = champion_name
+    champion.japanese_name = champion_data['name']
+    champion.resource_name = champion_data['partype']
+
+    stats = champion_data['stats']
 
     champion.health = stats['hp']
     champion.health_growth = stats['hpperlevel']

@@ -49,7 +49,7 @@ def parse_champion() -> Champion:
 
 
 def test_happypath():
-    assert create_champion() == parse_champion()
+    assert create_champion() == parse_champion()[0]
 
 
 def test_invalid_format():
