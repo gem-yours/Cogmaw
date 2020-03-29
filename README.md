@@ -1,5 +1,5 @@
 ## Description
-Download and parse LoL champions json from (ddragon) [http://ddragon.leagueoflegends.com/cdn/].
+Download and parse LoL champions json from [ddragon](http://ddragon.leagueoflegends.com/cdn/).
 
 ## usage
 ``` sample.py
