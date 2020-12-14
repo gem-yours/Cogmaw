@@ -14,7 +14,10 @@ class ChampionDataSender:
     send Champion data to graphql server
     """
 
-    __SERVER_URL = 'http://0.0.0.0:8000/velkoz/'
+    def __init__(self, base_url: str):
+        self.base_url = base_url
+
+    base_url: str
     __MUTATION_TEMPLATE = '''
         mutation createChamp {{
           createChampion(championData: {{
@@ -52,7 +55,7 @@ class ChampionDataSender:
             raise InvalidChampion("champion", "None")
 
         transport = RequestsHTTPTransport(
-            url=self.__SERVER_URL,
+            url=self.base_url,
             use_json=True,
             headers={
                 "Content-type": "application/json",

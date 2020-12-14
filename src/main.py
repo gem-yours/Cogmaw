@@ -14,6 +14,6 @@ json = json_provider.provide("10.2.1", "ja_JP")
 
 champions = parse(json)
 
-sender = ChampionDataSender()
+sender = ChampionDataSender('http://0.0.0.0:8000/velkoz/')
 
 [sender.send(champion) for champion in champions]
