@@ -42,47 +42,7 @@ def parse_champion() -> Champion:
     """
     create aatrox information from json file
     :return: aatrox champion object
-    """{
-  "version": "9.5.1",
-  "data": {
-    "Aatrox": {
-      "id": "Aatrox",
-      "name": "エイトロックス",
-      "image": {
-        "full": "Aatrox.png",
-        "sprite": "champion0.png",
-        "group": "champion",
-        "x": 0,
-        "y": 0,
-        "w": 48,
-        "h": 48
-      },
-      "stats": {
-        "hp": 580,
-        "hpperlevel": 80,
-        "mp": 0,
-        "mpperlevel": 0,
-        "movespeed": 345,
-        "armor": 33,
-        "armorperlevel": 3.25,
-        "spellblock": 32.1,
-        "spellblockperlevel": 1.25,
-        "attackrange": 175,
-        "hpregen": 8,
-        "hpregenperlevel": 0.75,
-        "mpregen": 0,
-        "mpregenperlevel": 0,
-        "crit": 0,
-        "critperlevel": 0,
-        "attackdamage": 60,
-        "attackdamageperlevel": 5,
-        "attackspeedperlevel": 2.5,
-        "attackspeed": 0.651
-      },
-      "partype": "ブラッドウェル"
-    }
-  }
-}
+    """
     with open('Aatrox.json') as file:
         json = file.read()
     return parser.parse(json)
