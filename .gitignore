@@ -147,4 +147,3 @@ src/model/__pycache__/
 src/entity/__pycache__/
 
 *.json
-*.py
