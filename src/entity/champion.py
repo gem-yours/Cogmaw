@@ -1,6 +1,5 @@
 
 class Champion(object):
-    patch: str
     image: str  # not implemented now. should create ChampionImage class
     name: str  # English name
     japanese_name: str

@@ -23,25 +23,24 @@ class ChampionDataSender:
           createChampion(championData: {{
             name: "{0}"
             japaneseName: "{1}"
-            patch: "{2}"
-            health: {3}
-            healthGrowth: {4}
-            healthRegen: {5}
-            healthRegenGrowth: {6}
-            resourceName: "{7}"
-            resource: {8}
-            resourceGrowth: {9}
-            resourceRegen: {10}
-            resourceRegenGrowth: {11}
-            attackDamage: {12}
-            attackDamageGrowth: {13}
-            attackSpeed: {14}
-            attackSpeedGrowth: {15}
-            armor: {16}
-            armorGrowth: {17}
-            magicResist: {18}
-            magicResistGrowth: {19}
-            moveSpeed: {20}
+            health: {2}
+            healthGrowth: {3}
+            healthRegen: {4}
+            healthRegenGrowth: {5}
+            resourceName: "{6}"
+            resource: {7}
+            resourceGrowth: {8}
+            resourceRegen: {9}
+            resourceRegenGrowth: {10}
+            attackDamage: {11}
+            attackDamageGrowth: {12}
+            attackSpeed: {13}
+            attackSpeedGrowth: {14}
+            armor: {15}
+            armorGrowth: {16}
+            magicResist: {17}
+            magicResistGrowth: {18}
+            moveSpeed: {19}
           }}) {{
             champion {{
               name
@@ -67,11 +66,9 @@ class ChampionDataSender:
             transport=transport,
             fetch_schema_from_transport=True,
         )
-        # TODO: テンプレートにパラメータを入れてgqlで送信する
         query_str: str = self.__MUTATION_TEMPLATE.format(
             champion.name,
             champion.japanese_name,
-            champion.patch,
             champion.health,
             champion.health_growth,
             champion.health_regen,

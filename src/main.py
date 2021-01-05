@@ -10,7 +10,7 @@ with open('test/Aatrox.json') as file:
     json = file.read()
 
 json_provider = ChampionJsonProvider()
-json = json_provider.provide("10.2.1", "ja_JP")
+json = json_provider.provide("10.25.1", "ja_JP")
 
 champions = parse(json)
 
