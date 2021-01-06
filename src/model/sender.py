@@ -32,15 +32,16 @@ class ChampionDataSender:
             resourceGrowth: {8}
             resourceRegen: {9}
             resourceRegenGrowth: {10}
-            attackDamage: {11}
-            attackDamageGrowth: {12}
-            attackSpeed: {13}
-            attackSpeedGrowth: {14}
-            armor: {15}
-            armorGrowth: {16}
-            magicResist: {17}
-            magicResistGrowth: {18}
-            moveSpeed: {19}
+            attackRange: {11}
+            attackDamage: {12}
+            attackDamageGrowth: {13}
+            attackSpeed: {14}
+            attackSpeedGrowth: {15}
+            armor: {16}
+            armorGrowth: {17}
+            magicResist: {18}
+            magicResistGrowth: {19}
+            moveSpeed: {20}
           }}) {{
             champion {{
               name
@@ -78,6 +79,7 @@ class ChampionDataSender:
             champion.resource_growth,
             champion.resource_regen,
             champion.resource_regen_growth,
+            champion.range,
             champion.attack_damage,
             champion.attack_damage_growth,
             champion.attack_speed,
