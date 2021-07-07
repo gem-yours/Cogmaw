@@ -1,6 +1,6 @@
 
 class Champion(object):
-    image: str  # not implemented now. should create ChampionImage class
+    base64_image: str
     name: str  # English name
     japanese_name: str
 

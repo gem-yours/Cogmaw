@@ -2,6 +2,7 @@ import json
 from typing import List
 
 from src.entity.champion import Champion
+from src.model.iconprovider import IconProvider
 
 
 def parse(json_str: str) -> List[Champion]:
@@ -21,6 +22,7 @@ def __convert_dict_to_champion(champion_data: dict, champion_name: str, patch: s
     champion = Champion()
     champion.patch = patch
     champion.name = champion_name
+    champion.base64_image = IconProvider().provide_base64(patch, champion_name)
     champion.japanese_name = champion_data['name']
     champion.resource_name = champion_data['partype']
 
